@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    if (!newNode) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+int isEmpty(struct Node* top) {
+    return top == NULL
+void push(struct Node** top, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = *top;
+    *top = newNode;
+    printf("Pushed %d onto the stack.\n", data);
+}
+
+int pop(struct Node** top) {
+    if (isEmpty(*top)) {
+        printf("Stack underflow! Cannot pop from an empty stack.\n");
+        return -1;
+    }
+    struct Node* temp = *top;
+    int poppedData = temp->data
+
